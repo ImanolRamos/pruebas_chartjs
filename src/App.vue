@@ -1,28 +1,63 @@
-<template>
+<template lang="es">
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="cabecera">
+      <h1>Lista de tareas</h1>
+    </div>
+    <div class="graficas">
+      <div class="chart-container">
+        <BarChart />
+      </div>
+      <div class="chart-container">
+        <BarChart />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BarChart from './components/BarChart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BarChart
   }
 }
 </script>
 
 <style>
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* color de fondo opcional para la cabecera */
+}
+
+.graficas {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container {
+  height: 50%; /* 50% of 80% makes it 40% of the total height */
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 </style>

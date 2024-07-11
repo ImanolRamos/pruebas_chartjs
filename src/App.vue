@@ -8,7 +8,7 @@
         <BarChart />
       </div>
       <div class="chart-container">
-        <BarChart />
+        <LineChart />
       </div>
     </div>
   </div>
@@ -16,11 +16,13 @@
 
 <script>
 import BarChart from './components/BarChart.vue'
+import LineChart from './components/LineChart.vue'
+
 
 export default {
   name: 'App',
   components: {
-    BarChart
+    BarChart, LineChart
   }
 }
 </script>

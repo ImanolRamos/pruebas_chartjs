@@ -35,8 +35,18 @@
           responsive: true,
           maintainAspectRatio: false,
           scales: {
+            y:{
+              title:{
+                display: true,
+                text: 'Ciclos'
+              },
+            },
             x: {
               type: 'time',
+              title:{
+                display: true,
+                text: 'Hora'
+              },
               time: {
                 unit: 'hour',
                 displayFormats: {

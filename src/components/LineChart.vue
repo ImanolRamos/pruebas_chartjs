@@ -38,11 +38,12 @@
             x: {
               type: 'time',
               time: {
-                unit: 'minute',
+                unit: 'hour',
                 displayFormats: {
                   minute: 'HH:mm'
                 }
               },
+             
               // ticks: {
               //   callback: function(value, index, values) {
               //     // Mostrar solo etiquetas de horas completas
